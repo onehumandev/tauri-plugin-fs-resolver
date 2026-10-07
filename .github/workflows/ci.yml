@@ -40,6 +40,9 @@ jobs:
          - name: Install npm dependencies
            run: npm ci
 
+         - name: Verify Android Gradle contract
+           run: npm run verify:android-gradle
+
          - name: Run standards checks
            run: |
              # Determine commitlint range
